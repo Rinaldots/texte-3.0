@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three/build/three.module.js"
+				}
+			}
+		</script>
+        <script type="module" src="/main.js"></script>
+        <script src="gyro.js" ></script>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+        
+		
+        <input type="button" onclick="onClick()" value="Iniciar Giroscópio">
+		<p><span class="leitura">Giroscopio: <span id="gyroAlpha">0</span></span></p>
+		<p><span class="leitura">Giroscopio: <span id="request">0</span></span></p>
+      	<p><span class="leitura">Acelerometro: <span id="gyroBeta">0</span></span></p>
+      	<p><span class="leitura">Movimento: <span id="gyroGamma">0</span></span></p>
+	</body>
+</html>
