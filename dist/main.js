@@ -21,9 +21,9 @@ camera.position.z = 10;
 function animate() {
 	requestAnimationFrame( animate );
      
-    cube.rotation.x = (gyroData.beta*0,0174533)
-	cube.rotation.y = (gyroData.alpha*0,0174533);
-	cube.rotation.z = (gyroData.gamma*0,0174533);
+    cube.rotation.x = (gyroData.beta*0.0174533)
+	cube.rotation.y = (gyroData.alpha*0.0174533);
+	cube.rotation.z = (gyroData.gamma*0.0174533);
 	
 
 	renderer.render( scene, camera );
