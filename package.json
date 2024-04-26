@@ -1,4 +1,12 @@
 {
+  "homepage": "https://rinaldots.github.io/texte-3.0/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
+  
+  },
   "dependencies": {
     "gh-pages": "^6.1.1",
     "three": "^0.164.0",
