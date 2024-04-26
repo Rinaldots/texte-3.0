@@ -1,6 +1,9 @@
 import * as THREE from 'three'
 
 
+import mqtt from 'mqtt'; const client = mqtt.connect('mqtt://broker.hivemq.com');
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
