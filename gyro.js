@@ -52,6 +52,7 @@ function gyro(event) {
   document.getElementById('gyroAlpha').textContent = gyroData.alpha.toFixed(3);
   document.getElementById('gyroBeta').textContent = gyroData.beta.toFixed(3);
   document.getElementById('gyroGamma').textContent = gyroData.gamma.toFixed(3);
+  
 }
 
 function acell(event) {
