@@ -60,8 +60,8 @@ camera.position.z = 10;
 function animate() {
 	requestAnimationFrame( animate );
      
-    cube.rotation.x = gyroData.alpha;
-	cube.rotation.y = 10;
+    cube.rotation.x = 0;
+	cube.rotation.y += 0.1;
 	
 
 	renderer.render( scene, camera );
