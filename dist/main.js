@@ -22,7 +22,7 @@ function animate() {
 	requestAnimationFrame( animate );
      
     cube.rotation.x = (gyroData.beta/90)
-	cube.rotation.y = 0;
+	cube.rotation.y = (gyroData.gamma/90);
 	cube.rotation.z = 0;
 	
 
