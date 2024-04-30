@@ -10,18 +10,20 @@
 
 	</head>
 	<body>
-        
-		<script type="importmap">
+		
+        <script type="importmap">
 			{
 				"imports": {
-					"three": "https://unpkg.com/three/build/three.module.js"
+					"three": "https://unpkg.com/three@0.138.0/build/three.module.js",
+					"OrbitControls": "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
 				}
 			}
-		</script>
-		
+		</script>		
+				
 		<script src="https://unpkg.com/mqtt/dist/mqtt.js"></script>
         <script type="module" src="scr\js\animation.js"></script>
-        <script src="scr\js\getdata.js" ></script>
+		
+		<script src="scr\js\getdata.js" ></script>
 		<script src="scr\js\mqttsever.js" ></script>
 		
         <p><span class="leitura">Alpha: <span id="gyroAlpha">0</span></span></p>
