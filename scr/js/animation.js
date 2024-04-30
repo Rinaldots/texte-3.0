@@ -1,10 +1,14 @@
 import * as THREE from 'three'
+import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+
+
 
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 const renderer = new THREE.WebGLRenderer();
 document.body.appendChild( renderer.domElement );
+
 
 const cubeLoader = new THREE.TextureLoader();
 const geometry = new THREE.BoxGeometry( 4, 4, 4 );
@@ -31,8 +35,8 @@ back.position.z = -10
 function animate() {
 	requestAnimationFrame( animate );
   
-  cube.rotation.x = gyroData.beta*0.17;
-	cube.rotation.y = gyroData.gamma*0.17;
+  cube.rotation.x += 0.01;
+	cube.rotation.y += 0.01;
 
 	
   renderer.setSize( window.innerWidth, window.innerHeight );
@@ -43,7 +47,6 @@ function animate() {
 }
 
 animate();
-
 
 
 
