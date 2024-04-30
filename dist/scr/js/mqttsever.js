@@ -8,7 +8,7 @@ const options = {
   password: '123',
 
 }
-const client = mqtt.connect('wss://d1af317f.ala.us-east-1.emqxsl.com:8084/mqtt',options);
+const client mqtt.connect('ws://192.168.1.100:8080/mqtt',options);
    
     client.on('connect', () => {
       console.log('Connected')
