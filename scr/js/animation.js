@@ -43,7 +43,7 @@ function animate() {
 }
 
 animate();
-window.addEventListener("load", (IniciarData) => {});
+
 
 
 
