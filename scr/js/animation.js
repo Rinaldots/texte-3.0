@@ -31,8 +31,8 @@ back.position.z = -10
 function animate() {
 	requestAnimationFrame( animate );
   
-  cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
+  cube.rotation.x = gyroData.beta*0.17;
+	cube.rotation.y = gyroData.gamma*0.17;
 
 	
   renderer.setSize( window.innerWidth, window.innerHeight );
@@ -43,6 +43,7 @@ function animate() {
 }
 
 animate();
+window.addEventListener("load", (IniciarData) => {});
 
 
 

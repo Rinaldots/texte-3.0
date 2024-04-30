@@ -7,7 +7,7 @@ const gyroData = {
   dgamma: 0.1,
 };
   
-function onClick() {
+function IniciarData() {
     if (typeof DeviceOrientationEvent.requestPermission === 'function') {
     DeviceOrientationEvent.requestPermission()
       .then(permissionState => {
