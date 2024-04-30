@@ -3,15 +3,16 @@ const options = {
   clean: true,
   connectTimeout: 4000,
   // Authentication
-  clientId: 'emqx_test',
-  username: 'emqx_test',
-  password: 'emqx_test',
+  clientId: 'emqx_'+Math.random().toString(16).substring(2, 8),
+  username: 'example-username',
+  password: '123',
+
 }
-const client = mqtt.connect('ws://broker.emqx.io:8083/mqtt');
+const client = mqtt.connect('wss://d1af317f.ala.us-east-1.emqxsl.com:8084/mqtt',options);
    
     client.on('connect', () => {
       console.log('Connected')
-      client.publish('cluster/messages/node7', 'Conectado ao broker!');
+      client.publish('test', 'Conectado ao broker!');
     })
     client.on('error', (err) => {
       console.log('Connection error: ', err)
@@ -23,7 +24,7 @@ const client = mqtt.connect('ws://broker.emqx.io:8083/mqtt');
 
   
     function sendData(){
-      client.publish('cluster/messages/node7', gyroData.alpha.toFixed(3));
+      client.publish('test', gyroData.alpha.toFixed(3));
     }
 
-    setInterval(sendData, 1000);
+    setInterval(sendData, 10000);
