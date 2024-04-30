@@ -43,3 +43,4 @@ function acell(event) {
   gyroData.dgamma = event.rotationRate.gamma;
 }
 
+window.addEventListener("load", IniciarData);
